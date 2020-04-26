@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colour Picker</title>
+  <link rel="stylesheet" href="https://acidtone.github.io/core/v0/css/reset.css">
+  <link rel="stylesheet" href="https://acidtone.github.io/core/v0/css/utilities.css">
+  <link rel="stylesheet" href="./css/colour.css">
+  <link id="colour-harmony" rel="stylesheet" href="./css/colour-mono.css">
+  <style>
+    
+    main {
+      min-width: 100vmin;
+    }
+    main.grid {
+      grid-template-columns: min-content 1fr;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      width: 50ch;
+    }
+    
+    .swatch-list {
+      --grid-cols: 7;
+      grid-gap: 1px;
+      
+      width: min-content;
+      margin: auto;
+    }
+    .swatch-list > * {
+      width: 5em;
+      height: 5em;
+    }
+
+    .gray {
+      height: 1em;
+    }
+  </style>
+</head>
+<body>
+  <main class="full-height grid grid-cols2 center-outside analog">
+    <form id="colourizer" action="#">
+      <fieldset>
+        <legend>
+          Colour Prophantasizer: spin the dippity-dos.
+        </legend>
+        <div>
+          <label for="harmony">
+            <select name="haromony" id="harmony">
+              <option value="mono">Monochromatic</option>
+              <option value="comp">Complimentary</option>
+              <option value="triadic">Triadic</option>
+              <option value="split-comp">Split Complimentary</option>
+              <option value="analog">Analogous</option>
+              <option value="tetradic">Tetradic</option>
+            </select>
+          </label>
+          <label for="hue"></label>
+            <input id="hue" type="range" min="0" max="360" value="0">
+        </div>
+      </fieldset>
+    </form>
+    <section id="artboard"  class="grid grid-cols2">
+      <article id="hue1">
+        <h2>[1&#176;] Hue</h2>
+        <ul class="swatch-list grid clear-style">
+          <!-- Possible to take advantage of `display: contents`?  subgrid? -->
+
+          <li class="pretty-light hue1"></li>
+          <li class="light hue1"></li>
+          <li class="kinda-light hue1"></li>
+          <li class="hue1"></li>
+          <li class="kinda-dark hue1"></li>
+          <li class="dark hue1"></li>
+          <li class="pretty-dark hue1"></li>
+
+          <li class="pretty-light washed hue1"></li>
+          <li class="light washed hue1"></li>
+          <li class="kinda-light washed hue1"></li>
+          <li class="washed hue1"></li>
+          <li class="kinda-dark washed hue1"></li>
+          <li class="dark washed hue1"></li>
+          <li class="pretty-dark washed hue1"></li>
+
+          <li class="pretty-light muted hue1"></li>
+          <li class="light muted hue1"></li>
+          <li class="kinda-light muted hue1"></li>
+          <li class="muted hue1"></li>
+          <li class="kinda-dark muted hue1"></li>
+          <li class="dark muted hue1"></li>
+          <li class="pretty-dark muted hue1"></li>
+
+          <li class="pretty-light gray hue1"></li>
+          <li class="light gray hue1"></li>
+          <li class="kinda-light gray hue1"></li>
+          <li class="gray hue1"></li>
+          <li class="kinda-dark gray hue1"></li>
+          <li class="dark gray hue1"></li>
+          <li class="pretty-dark gray hue1"></li>
+
+        </ul>
+      </article>
+      <article id="hue2">
+        <h2>[2&#176;] Hue</h2>
+        <ul class="swatch-list grid clear-style">
+
+          <li class="pretty-light hue2"></li>
+          <li class="light hue2"></li>
+          <li class="kinda-light hue2"></li>
+          <li class="hue2"></li>
+          <li class="kinda-dark hue2"></li>
+          <li class="dark hue2"></li>
+          <li class="pretty-dark hue2"></li>
+
+          <li class="pretty-light washed hue2"></li>
+          <li class="light washed hue2"></li>
+          <li class="kinda-light washed hue2"></li>
+          <li class="washed hue2"></li>
+          <li class="kinda-dark washed hue2"></li>
+          <li class="dark washed hue2"></li>
+          <li class="pretty-dark washed hue2"></li>
+
+          <li class="pretty-light muted hue2"></li>
+          <li class="light muted hue2"></li>
+          <li class="kinda-light muted hue2"></li>
+          <li class="muted hue2"></li>
+          <li class="kinda-dark muted hue2"></li>
+          <li class="dark muted hue2"></li>
+          <li class="pretty-dark muted hue2"></li>
+
+          <li class="pretty-light gray hue2"></li>
+          <li class="light gray hue2"></li>
+          <li class="kinda-light gray hue2"></li>
+          <li class="gray hue2"></li>
+          <li class="kinda-dark gray hue2"></li>
+          <li class="dark gray hue2"></li>
+          <li class="pretty-dark gray hue2"></li>
+
+        </ul>
+      </article>
+      <article id="hue3">
+        <h2>[3&#176;] Hue</h2>
+        <ul class="swatch-list grid clear-style">
+
+          <li class="pretty-light hue3"></li>
+          <li class="light hue3"></li>
+          <li class="kinda-light hue3"></li>
+          <li class="hue3"></li>
+          <li class="kinda-dark hue3"></li>
+          <li class="dark hue3"></li>
+          <li class="pretty-dark hue3"></li>
+
+          <li class="pretty-light washed hue3"></li>
+          <li class="light washed hue3"></li>
+          <li class="kinda-light washed hue3"></li>
+          <li class="washed hue3"></li>
+          <li class="kinda-dark washed hue3"></li>
+          <li class="dark washed hue3"></li>
+          <li class="pretty-dark washed hue3"></li>
+
+          <li class="pretty-light muted hue3"></li>
+          <li class="light muted hue3"></li>
+          <li class="kinda-light muted hue3"></li>
+          <li class="muted hue3"></li>
+          <li class="kinda-dark muted hue3"></li>
+          <li class="dark muted hue3"></li>
+          <li class="pretty-dark muted hue3"></li>
+
+          <li class="pretty-light gray hue3"></li>
+          <li class="light gray hue3"></li>
+          <li class="kinda-light gray hue3"></li>
+          <li class="gray hue3"></li>
+          <li class="kinda-dark gray hue3"></li>
+          <li class="dark gray hue3"></li>
+          <li class="pretty-dark gray hue3"></li>
+
+        </ul>
+      </article>
+      <article id="hue4">
+        <h2>[4&#176;] Hue</h2>
+        <ul class="swatch-list grid clear-style">
+
+          <li class="pretty-light hue4"></li>
+          <li class="light hue4"></li>
+          <li class="kinda-light hue4"></li>
+          <li class="hue4"></li>
+          <li class="kinda-dark hue4"></li>
+          <li class="dark hue4"></li>
+          <li class="pretty-dark hue4"></li>
+
+          <li class="pretty-light washed hue4"></li>
+          <li class="light washed hue4"></li>
+          <li class="kinda-light washed hue4"></li>
+          <li class="washed hue4"></li>
+          <li class="kinda-dark washed hue4"></li>
+          <li class="dark washed hue4"></li>
+          <li class="pretty-dark washed hue4"></li>
+
+          <li class="pretty-light muted hue4"></li>
+          <li class="light muted hue4"></li>
+          <li class="kinda-light muted hue4"></li>
+          <li class="muted hue4"></li>
+          <li class="kinda-dark muted hue4"></li>
+          <li class="dark muted hue4"></li>
+          <li class="pretty-dark muted hue4"></li>
+
+          <li class="pretty-light gray hue4"></li>
+          <li class="light gray hue4"></li>
+          <li class="kinda-light gray hue4"></li>
+          <li class="gray hue4"></li>
+          <li class="kinda-dark gray hue4"></li>
+          <li class="dark gray hue4"></li>
+          <li class="pretty-dark gray hue4"></li>
+
+        </ul>
+      </article>
+    </section>
+  </main>
+  <script>
+    const form = document.getElementById('colourizer');
+    const artboard = document.getElementById('artboard');
+    const styleHarmony = document.getElementById('colour-harmony');
+
+    function swapSheet(el, url) {
+      // TODO: filter input through URL API
+      el.setAttribute('href',url);
+    };
+    
+    form.hue.addEventListener('input', function(evt) {
+      document.querySelector(':root').style.setProperty('--hue',evt.target.value);
+    })
+    form.harmony.addEventListener('input',function(evt) {
+      swapSheet(styleHarmony,`./css/colour-${evt.target.value}.css`);
+      
+      console.log(getComputedStyle(document.querySelector('article')).getPropertyValue('--hue'));
+    });
+  </script>
+</body>
+</html>

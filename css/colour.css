@@ -1,0 +1,57 @@
+:root {
+  --hue: 0;
+  --lum: 50%;
+  --sat: 100%;
+}
+
+.hue1 {
+  background-color: hsl(var(--hue),var(--sat),var(--lum));
+}
+
+.hue2 {
+  background-color: hsl(calc(var(--hue) + var(--deflect1, 0)),var(--sat),var(--lum));
+}
+
+.hue3 {
+  background-color: hsl(calc(var(--hue) + var(--deflect2, 0)),var(--sat),var(--lum));
+}
+
+.hue4 {
+  background-color: hsl(calc(var(--hue) + var(--deflect3, 0)),var(--sat),var(--lum));
+}
+
+.pretty-light {
+  --lum: 90%;
+}
+.light {
+  --lum: 75%;
+}
+.kinda-light {
+  --lum: 60%;
+}
+
+.medium {
+  --lum: 50%;
+}
+.kinda-dark {
+  --lum: 40%;
+}
+.dark {
+  --lum: 25%;
+}
+.pretty-dark {
+  --lum: 10%;
+}
+
+.saturated {
+  --sat: 100%;
+}
+.washed {
+  --sat: 66%;
+}
+.muted {
+  --sat: 33%;
+}
+.gray {
+  --sat: 0%;
+}

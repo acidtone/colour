@@ -1,0 +1,12 @@
+:root {
+  --deflect1: 150;
+  --deflect2: 210;
+}
+
+#hue4 {
+  display: none;
+}
+
+#artboard {
+  display: block;
+}
