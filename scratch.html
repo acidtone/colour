@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2x2</title>
+  <link rel="stylesheet" href="./css/colour.css">
+  <link id="colour-harmony" rel="stylesheet" href="./css/colour-tetradic.css">
+  <style>
+    body {
+      margin: 0;
+    }
+    main {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: min-content 1fr;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      justify-content: stretch;
+      align-items: stretch;
+    }
+
+    article {
+      display: grid;
+      grid-template-rows: min-content 1fr;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(7,1fr);
+      grid-template-rows: repeat(3,1fr) 1em;
+    }
+
+    article:nth-child(1) {
+      background-color: hsl(var(--hue),var(--sat),var(--lum));
+    }
+
+    article:nth-child(2) {
+      background-color: hsl(calc(var(--hue) + var(--deflect1, 0)),var(--sat),var(--lum));
+    }
+
+    article:nth-child(3) {
+      background-color: hsl(calc(var(--hue) + var(--deflect2, 0)),var(--sat),var(--lum));
+    }
+
+    article:nth-child(4) {
+      background-color: hsl(calc(var(--hue) + var(--deflect3, 0)),var(--sat),var(--lum));
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Hello World!</h1>
+    </header>
+    <section>
+      <article>
+        <h2>[1&#176;] Hue</h2>
+        <ul>
+          <!-- Possible to take advantage of `display: contents`?  subgrid? -->
+
+          <li class="pretty-light hue1"></li>
+          <li class="light hue1"></li>
+          <li class="kinda-light hue1"></li>
+          <li class="hue1"></li>
+          <li class="kinda-dark hue1"></li>
+          <li class="dark hue1"></li>
+          <li class="pretty-dark hue1"></li>
+
+          <li class="pretty-light washed hue1"></li>
+          <li class="light washed hue1"></li>
+          <li class="kinda-light washed hue1"></li>
+          <li class="washed hue1"></li>
+          <li class="kinda-dark washed hue1"></li>
+          <li class="dark washed hue1"></li>
+          <li class="pretty-dark washed hue1"></li>
+
+          <li class="pretty-light muted hue1"></li>
+          <li class="light muted hue1"></li>
+          <li class="kinda-light muted hue1"></li>
+          <li class="muted hue1"></li>
+          <li class="kinda-dark muted hue1"></li>
+          <li class="dark muted hue1"></li>
+          <li class="pretty-dark muted hue1"></li>
+
+          <li class="pretty-light gray hue1"></li>
+          <li class="light gray hue1"></li>
+          <li class="kinda-light gray hue1"></li>
+          <li class="gray hue1"></li>
+          <li class="kinda-dark gray hue1"></li>
+          <li class="dark gray hue1"></li>
+          <li class="pretty-dark gray hue1"></li>
+
+        </ul>
+      </article>
+      <article></article>
+      <article></article>
+      <article></article>
+    </section>
+  </main>
+</body>
+</html>
